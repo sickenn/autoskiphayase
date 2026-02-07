@@ -4,7 +4,7 @@
     "name": "Auto Skip Intro / Outro",
     "version": "1.0.0",
     "type": "js",
-    "description": "Automatically skips intro and outro when available.",
+    "description": "Automatically skips intro and outro segments.",
     "author": "sicken",
     "code": "https://raw.githubusercontent.com/sickenn/autoskiphayase/main/auto-skip.js"
   }
