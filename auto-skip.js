@@ -1,9 +1,9 @@
-export function onVideoUpdate(player) {
+export function onVideoUpdate() {
   try {
     const buttons = document.querySelectorAll("button");
 
-    buttons.forEach(btn => {
-      const text = btn.innerText?.toLowerCase() || "";
+    for (const btn of buttons) {
+      const text = (btn.innerText || "").toLowerCase();
 
       if (
         text.includes("skip intro") ||
@@ -13,6 +13,6 @@ export function onVideoUpdate(player) {
       ) {
         btn.click();
       }
-    });
+    }
   } catch {}
 }

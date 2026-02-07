@@ -1,0 +1,12 @@
+[
+  {
+    "id": "hayase.extension.autoskip",
+    "name": "Auto Skip Intro / Outro",
+    "version": "1.0.0",
+    "type": "js",
+    "description": "Automatically skips intro and outro segments.",
+    "author": "sicken",
+    "update": "https://raw.githubusercontent.com/sickenn/autoskiphayase/main/index.json",
+    "code": "https://raw.githubusercontent.com/sickenn/autoskiphayase/main/auto-skip.js"
+  }
+]
