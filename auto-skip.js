@@ -1,18 +1,28 @@
-export function onVideoUpdate() {
-  try {
-    const buttons = document.querySelectorAll("button");
+export default new class AutoSkip {
+  name = "AutoSkip"
 
-    for (const btn of buttons) {
-      const text = (btn.innerText || "").toLowerCase();
+  onVideoLoad(player) {
+    this.player = player
+  }
 
-      if (
-        text.includes("skip intro") ||
-        text.includes("skip outro") ||
-        text.includes("skip opening") ||
-        text.includes("skip ending")
-      ) {
-        btn.click();
+  onVideoTime(time) {
+    if (!this.player) return
+
+    try {
+      const skips = this.player?.skips
+      if (!skips) return
+
+      if (skips.intro && time >= skips.intro.start && time <= skips.intro.end) {
+        this.player.seek(skips.intro.end + 0.1)
       }
-    }
-  } catch {}
-}
+
+      if (skips.outro && time >= skips.outro.start && time <= skips.outro.end) {
+        this.player.seek(skips.outro.end + 0.1)
+      }
+    } catch {}
+  }
+
+  test() {
+    return true
+  }
+}()
