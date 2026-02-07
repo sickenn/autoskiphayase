@@ -1,0 +1,9 @@
+{
+  "name": "Auto Skip Intro/Outro",
+  "id": "auto-skip.hayase",
+  "version": "1.0.0",
+  "description": "Automatically skips intro and outro segments.",
+  "author": "sicken",
+  "type": "js",
+  "entry": "auto-skip.js"
+}
